@@ -11,8 +11,6 @@ var users = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://foundation123:foundation123@ds125146.mlab.com:25146/found\n'+'ation-test1');
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

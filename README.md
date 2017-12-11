@@ -7,3 +7,15 @@
 
 - You also can go an test the application directly from  Heroku using the following URL:
   https://condorlabs-apirest.herokuapp.com/
+
+  # Endpoints
+
+  ## GET /providers
+
+  ## GET /providers/{id}
+
+  ## POST /providers
+
+  ## PUT /providers/{id}
+
+  ## DELETE /providers/{id}

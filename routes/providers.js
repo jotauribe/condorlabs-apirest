@@ -7,7 +7,6 @@ var url = defaults['url'];
 
 const collection = 'provider'
 
-
 /* GET providers listing. */
 router.get('/', function(req, res, next) {
     MongoClient.connect(url, function (err, client) {

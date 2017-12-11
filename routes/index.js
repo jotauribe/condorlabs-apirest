@@ -5,17 +5,8 @@ var router = express.Router();
 var url = defaults['url'];
 
 /* GET home page. */
-
-/*
-
-{
-    name: "uribe"
-    specialty_id: "Inmunology"
-}
-
-*/
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'CondorLabs Providers Web API Endpoint' });
 });
 
 module.exports = router;

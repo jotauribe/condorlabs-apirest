@@ -29,8 +29,8 @@ router.get('/:id', function(req, res, next) {
     var db = dbClient.db('foundation-test1');
     var p = db.collection('provider');
     var id = req.params.id
-    p.find({'_id': new ObjectID(id)}).toArray(function(err, item) {
-        res.send(item);
+    p.find({'_id': new ObjectID(id)}).toArray(function(err, docs) {
+        res.send(docs);
     });
     dbClient.close();
 });

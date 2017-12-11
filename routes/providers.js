@@ -13,11 +13,6 @@ router.get('/', function(req, res, next) {
         if(err){ return console.dir(err); }
         var db = client.db('foundation-test1');
         var p = db.collection(collection);
-        var schema=p.findOne();
-        console.log(typeof schema[0]) ;
-        for (var key in schema) {
-            console.log(key, typeof schema[key])
-        }
 
         p.find({}).toArray(function(err, docs) {
             res.send(docs);
@@ -26,7 +21,7 @@ router.get('/', function(req, res, next) {
     });
 });
 
-/* GET a provider identified by ID. */
+/* GET a provider identified by a given ID. */
 router.get('/:id', function(req, res, next) {
     MongoClient.connect(url, function (err, client) {
         if(err){ return console.dir(err); }
@@ -40,7 +35,7 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-/* GET a provider identified by ID. */
+/* CREATE a provider. */
 router.post('/', function(req, res, next) {
     MongoClient.connect(url, function (err, client) {
         if(err){ return console.dir(err); }
@@ -54,6 +49,7 @@ router.post('/', function(req, res, next) {
     });
 });
 
+//DELETE a providider identified by a given ID
 router.delete('/:id', function(req, res, next) {
     MongoClient.connect(url, function (err, client) {
         if(err){ return console.dir(err); }
@@ -68,6 +64,7 @@ router.delete('/:id', function(req, res, next) {
     });
 });
 
+//UPDATE a provider identified by a given ID
 router.put('/:id', function(req, res, next) {
     MongoClient.connect(url, function (err, client) {
         if(err){ return console.dir(err); }

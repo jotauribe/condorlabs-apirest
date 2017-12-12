@@ -56,7 +56,7 @@ exports.createAProvider = function (request, response) {
 
 exports.updateAProvider = function (request, response) {
     const id = request.params.id;
-    Specialty.findOneAndUpdate({_id: id}, request.body, {new: true},
+    Provider.findOneAndUpdate({_id: id}, request.body, {new: true},
         function(error, updatedProvider) {
             if (error) response.send(error);
             //else

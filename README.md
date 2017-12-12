@@ -68,7 +68,6 @@
               "updatedBy": Number,
               "updatedAt": Date
           }
-
     }
     ```
 

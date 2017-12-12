@@ -34,7 +34,7 @@
         "firstName": String,
         "updatedBy": Number,
         "updatedAt": Date,
-        "specialty": String,
+        "specialty": String
   }
   ```
   
@@ -67,8 +67,10 @@
               "createdAt": Date,
               "updatedBy": Number,
               "updatedAt": Date
+          }
 
     }
     ```
+
 
   ## DELETE /providers/{id}
